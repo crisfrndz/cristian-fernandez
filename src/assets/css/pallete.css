@@ -1,0 +1,11 @@
+.mainname{
+    font-family: etna;
+}
+
+.cta-btn {
+    text-decoration: none; /* Remove underline */
+    border: none; /* Remove border */
+    outline: none; /* Remove outline */
+    /* Additional styling if needed */
+  }
+  

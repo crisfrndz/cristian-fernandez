@@ -1,0 +1,604 @@
+
+<!DOCTYPE html>
+<html lang="en" class="sr">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="shortcut icon" type="image/png" href="assets/favicon.png" />
+    <link rel="stylesheet" href="assets/css/pallete.css">
+    
+
+    <!-- Todo: put here your site title -->
+    <title>Cristian Fernandez | Developer</title>
+    <!-- Todo: add some coding keywords below - e.g: (javascript, yourusername, etc) -->
+    <meta name="keywords" content="[username], [name], skill" />
+    <!-- Todo: improve your SEO by adding a small description of you -->
+    <meta name="description" content="[Your name here] | Developer" />
+    <link rel="stylesheet" href="custom.css">
+
+    <!-- Include Font Awesome for icons -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+<!-- Optional: Include Bootstrap if not already included -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link rel="stylesheet" href="styles.scss" />
+    <script
+      defer
+      src="https://unpkg.com/scrollreveal@4.0.0/dist/scrollreveal.min.js"
+    ></script>
+
+    <style>
+      .modal-body.modal-body-left {
+    text-align: left;
+}
+.folder-icon {
+        font-size: 150px; /* Increase the icon size */
+        color: #ffd369; /* Adjust color as needed */
+    }
+    .folder-item {
+        text-align: center;
+        margin-bottom: 20px;
+    }
+    .folder-item .label {
+        margin-top: 10px;
+        font-size: 2rem;
+    }
+
+    .stacks{
+      margin: 1rem;
+    }
+    .icon-container {
+        position: relative; /* Position relative for inner positioning */
+        display: inline-block; /* Ensure the container only takes up as much space as the image */
+        background: rgba(255, 255, 255, 0.8); /* More opaque background to reduce transparency */
+        border-radius: 10px; /* Rounded corners */
+        padding: 15px; /* Increased padding around the icon for better spacing */
+        backdrop-filter: blur(10px); /* Blurry background */
+        -webkit-backdrop-filter: blur(10px); /* For Safari */
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Slightly more pronounced shadow for better contrast */
+        overflow: hidden; /* Ensure the blur does not overflow the container */
+    }
+
+    .custom-icon {
+        width: 100px; /* Fixed width for all icons */
+        height: 100px; /* Fixed height for all icons */
+        object-fit: contain; /* Ensure images fit within the defined width and height */
+    }
+
+    .icon-item {
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    .icon-item .label {
+        margin-top: 10px;
+        font-size: 16px; /* Adjust label font size as needed */
+        color: #ffffff; /* Optional: Adjust label color for better readability */
+    }
+
+    .fourpic{
+      width: 100%;
+      border-radius: 25px;
+    }
+    .picture-container{
+      width: 50%;
+    }
+
+    @media only screen and (max-width: 768px) {
+  .fourpic, .picture-container {
+    display: none;
+  }
+}
+
+
+
+    </style>
+
+  </head>
+
+  <!-- Todo: read the following HTML Todos to create your stunning portfolio website -->
+  <body>
+    <div id="top"></div>
+
+    <!-- **** Hero Section **** -->
+    <section id="hero" class="jumbotron">
+      <div class="hero-container"></div>
+      <div class="container">
+        <h1 class="hero-title load-hidden">
+          Hi, my name is <span class="text-color-main "><br>Cristian Fernandez</span>
+          <br />
+           a Technical Specialist
+        </h1>
+        <p class="hero-cta load-hidden">
+          <a rel="noreferrer" class="cta-btn cta-btn--hero" href="#about"
+            >Know more</a
+          >
+        </p>
+      </div>
+      <div class="picture-container">
+        <div class="pic4r">
+          <img src="assets/4R.jpg" alt="" class="fourpic">
+        </div>
+      </div>
+    </div>
+    </section>
+    <!-- /END Hero Section -->
+
+    <!-- **** About Section **** -->
+    <section id="about">
+      <div class="container">
+        <h2 class="section-title load-hidden">About me</h2>
+        <div class="row about-wrapper">
+          <div class="col-md-6 col-sm-12">
+            <div class="about-wrapper__image load-hidden">
+              <img
+                alt="Profile Image"
+                class="img-fluid rounded shadow-lg"
+                height="auto"
+                width="300px"
+                src="assets/profile.jpg"
+                alt="Profile Image"
+              />
+            </div>
+          </div>
+          <div class="col-md-6 col-sm-12">
+            <div class="about-wrapper__info load-hidden">
+              <p class="about-wrapper__info-text">
+      
+                I am Cristian Fernandez, a person  who loves technology. 
+              </p>
+              <p class="about-wrapper__info-text">
+                I love fixing things and finding solutions about problems. I also do some multimedia things like photo and video editing. Lastly my passion towards my course makes me love building websites.
+              </p>
+              <div class="d-flex flex-wrap gap-3">
+                <button class="about-btns " data-toggle="modal" data-target="#personalInfoModal">Personal Information</button>
+                <button class="about-btns" data-toggle="modal" data-target="#educationModal">Education</button>
+                <button type="button" class="about-btns " data-toggle="modal" data-target="#skillsModal">Skills</button>
+                <button class="about-btns " data-toggle="modal"  data-target="#certificationsModal">Certifications</button>         
+                <button class="about-btns " data-toggle="modal" data-target="#seminarsModal">Seminars / Workshops</button>
+                <button class="about-btns " data-toggle="modal" data-target="#achievementsModal">Achievements</button>
+              </div>
+              <span class="d-flex mt-3 gap-3">
+                <a
+                  rel="noreferrer"
+                  target="_blank"
+                  class="cta-btn cta-btn--resume"
+                  href="assets/resume.pdf"
+                >
+                  View Resume
+                </a>
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class=" mt-5 p-3 container">
+        <h2 class=" mt-5">Web Development Stack</h2>
+        
+        <div class="row p-3 ">
+          <div class="mt-5">
+            <div class=" container row">
+                <!-- Icon Item 1 -->
+                <div class="col-md-3 icon-item">
+                    <div class="icon-container">
+                        <img src="assets/tech-stack/laravel.svg" alt="Laravel Icon" class="custom-icon">
+                    </div>
+                    <div class="label">Laravel</div>
+                </div>
+                <!-- Icon Item 2 -->
+                <div class="col-md-3 icon-item">
+                    <div class="icon-container">
+                        <img src="assets/tech-stack/php-removebg-preview.png" alt="PHP Icon" class="custom-icon">
+                    </div>
+                    <div class="label">PHP</div>
+                </div>
+                <!-- Icon Item 3 -->
+                <div class="col-md-3 icon-item">
+                    <div class="icon-container">
+                        <img src="assets/tech-stack/Bootstrap.svg" alt="Bootstrap Icon" class="custom-icon">
+                    </div>
+                    <div class="label">Bootstrap</div>
+                </div>
+                <!-- Icon Item 4 -->
+                <div class="col-md-3 icon-item">
+                    <div class="icon-container">
+                        <img src="assets/tech-stack/azuresql-removebg-preview.png" alt="SQL Icon" class="custom-icon">
+                    </div>
+                    <div class="label">SQL</div>
+                </div>
+                <!-- Add more icon items as needed -->
+            </div>
+        </div>
+        
+        </div>
+        
+        </div>
+        <!-- /END Project -->
+
+        
+      
+
+      </div>
+    </section>
+    <!-- /END About Section -->
+
+    <!-- **** Projects Section **** -->
+    <section id="projects">
+      <div class="container">
+        <!-- major -->
+        <div class="project-wrapper">
+          <h2 class="section-title dark-blue-text">Major Web Projects</h2>
+
+          <!-- Notice: each .row is a project -->
+          <div class="row">
+            <div class="col-lg-4 col-sm-12">
+              <div class="project-wrapper__text load-hidden">
+                <h3 class="project-wrapper__text-title">Ordering Management System</h3>
+                <div>
+                  <p class="mb-4">
+                    
+                    A capstone project aims to help both the food organization and the customers to improve user experience. The project consisted of different users such as Restaurant admin, cashier, kitchen, and delivery rider. an for the customer side it has a website and kiosk interface that the customer can use to browse and order. Lastly the ordering maagement system supports multipe tenenats that allows the system to incorporate mutiple food organization and giving them personalization based on their preference as the website generic application.
+                  </p>
+                </div>
+                <a
+                  rel="noreferrer"
+                  target="_blank"
+                  class="cta-btn cta-btn--hero"
+                  href="https://bit.ly/swift-oms"
+                >
+                  See Live
+                </a>
+                
+              </div>
+            </div>
+            <div class="col-lg-8 col-sm-12">
+              <div class="project-wrapper__image load-hidden">
+                <a rel="noreferrer" href="#!" target="_blank">
+                  <div
+                    data-tilt
+                    data-tilt-max="4"
+                    data-tilt-glare="true"
+                    data-tilt-max-glare="0.5"
+                    class="thumbnail rounded js-tilt"
+                  >
+                    <img
+                      alt="Project Image"
+                      class="img-fluid"
+                      src="assets/project.jpg"
+                    />
+                  </div>
+                </a>
+              </div>
+            </div>
+          </div>
+          <!-- /END Project -->
+
+          
+        
+
+        </div>
+        <!-- minor -->
+        <div class="project-wrapper">
+          <h2 class="section-title dark-blue-text">Other Projects</h2>
+          
+          <div class="row">
+            <div class="container mt-5">
+              <div class="row">
+                  <!-- Folder Item 1 -->
+                  <div class="col-md-3 folder-item">
+                      <i class="fas fa-folder folder-icon"></i>
+                      <div class="label">GWA Computation System</div>
+                  </div>
+                  <!-- Folder Item 2 -->
+                  <div class="col-md-3 folder-item">
+                      <i class="fas fa-folder folder-icon"></i>
+                      <div class="label">MOE Calculator</div>
+                  </div>
+                  <!-- Folder Item 3 -->
+                  <div class="col-md-3 folder-item">
+                      <i class="fas fa-folder folder-icon"></i>
+                      <div class="label">Ticketing System</div>
+                  </div>
+                  <!-- Folder Item 4 -->
+                  <div class="col-md-3 folder-item">
+                      <i class="fas fa-folder folder-icon"></i>
+                      <div class="label">Weighted Mean Calculator</div>
+                  </div>
+                  <!-- Add more folder items as needed -->
+              </div>
+          </div>
+          </div>
+          <!-- /END Project -->
+
+          
+        
+
+        </div>
+      </div>
+    </section>
+    <!-- /END Projects Section -->
+
+    <!-- **** Contact Section **** -->
+    <section id="contact">
+      <div class="container">
+        <h2 class="section-title">Contact</h2>
+        <div class="contact-wrapper load-hidden">
+          <p class="contact-wrapper__text">Email me at <br> cristainlapfernandez@gmail.com</p>
+          <a rel="noreferrer" target="_blank" class="cta-btn cta-btn--resume" href="mailto:cristianlapfernandez@gmail.com">Contact Me!</a>
+
+          
+        </div>
+      </div>
+    </section>
+    <!-- /END Contact Section -->
+
+    <!-- **** Footer Section **** -->
+    <footer class="footer navbar-static-bottom">
+      <div class="container">
+        <a rel="noreferrer" href="#top" class="back-to-top">
+          <i class="fa fa-angle-up fa-2x" aria-hidden="true"></i>
+        </a>
+        <div class="social-links">
+          <a rel="noreferrer" href="https://www.facebook.com/snap.tech.service" target="_blank">
+            <i class="fa fa-facebook fa-inverse"></i>
+          </a>
+          <a rel="noreferrer" href="https://www.instagram.com/cristianfer9dez" target="_blank">
+            <i class="fa fa-instagram fa-inverse"></i>
+          </a>
+          <a rel="noreferrer" href="https://www.x.com/Crisfer9dez" target="_blank">
+            <i class="fa fa-twitter fa-inverse"></i>
+          </a>
+          <a rel="noreferrer" href="https://www.linkedin.com/in/cristianfer9dez" target="_blank">
+            <i class="fa fa-linkedin fa-inverse"></i>
+          </a>
+          <a rel="noreferrer" href="https://www.youtube.com/@CristianFer9dez" target="_blank">
+            <i class="fa fa-youtube fa-inverse"></i>
+          </a>
+          <!-- <a rel="noreferrer" target="_blank" class="cta-btn cta-btn--resume" href="mailto:cristianlapfernandez@gmail.com">
+            <i class="fa fa-google fa-inverse"></i>
+          </a>
+           -->
+          
+          <a rel="noreferrer" href="https://github.com/crisfrndz" target="_blank">
+            <i class="fa fa-github fa-inverse"></i>
+          </a>
+        </div>
+        
+
+        
+      </div>
+    </footer>
+    <!-- /END Footer Section -->
+
+    <script defer type="module" src="index.js"></script>
+
+    <!-- dito mga modal -->
+<!-- Certifications Modal -->
+<div class="modal fade" id="certificationsModal" tabindex="-1" role="dialog" aria-labelledby="certificationsModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+          <div class="modal-header">
+              <h5 class="modal-title" id="certificationsModalLabel">Certifications</h5>
+             
+          </div>
+          <div class="modal-body">
+             
+              <p>Oracle Database Foundation</p>
+              <p>AWS Introduction to Cloud Semester 1</p>
+              <p>Trailhead Admin Superset</p>
+          </div>
+          <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          </div>
+      </div>
+  </div>
+</div>
+
+
+
+<!-- Personal Information Modal -->
+<div class="modal fade" id="personalInfoModal" tabindex="-1" role="dialog" aria-labelledby="personalInfoModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+          <div class="modal-header">
+              <h5 class="modal-title" id="personalInfoModalLabel">Personal Information</h5>
+             
+          </div>
+          <div class="modal-body">
+              <p><strong>Address:</strong> Purok 2, Dimasalang Norte, Talavera, Nueva Ecija, Philippines</p>
+              <p><strong>Phone:</strong> +639662769916</p>
+              <p><strong>Email:</strong> cristianlapfernandez@gmail.com</p>
+              <p><strong>Birthday:</strong> November 9, 2002</p>
+              <p><strong>Nationality:</strong> Filipino</p>
+              <p><strong>Language:</strong> Tagalog, English</p>
+              <p><strong>Religion:</strong> Catholic</p>
+          </div>
+          <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          </div>
+      </div>
+  </div>
+</div>
+
+
+  <!-- Education Modal -->
+  <div class="modal fade" id="educationModal" tabindex="-1" role="dialog" aria-labelledby="educationModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="educationModalLabel">Education</h5>
+               
+            </div>
+            <div class="modal-body">
+                <div class="timeline-item">
+                    <div class="timeline-date">College</div>
+                    <div class="timeline-content">
+                        <p><strong>PHINMA Araullo University</strong></p>
+                        <p>Bachelor of Science in Information Technology</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-date">Senior High School</div>
+                    <div class="timeline-content">
+                        <p><strong>San Ricardo National High School</strong></p>
+                        <p>Specialized Program in Science, Technology, Engineering, and Mathematics</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-date">High School</div>
+                    <div class="timeline-content">
+                        <p><strong>San Ricardo National High School</strong></p>
+                        <p>Regular Program in High School Education</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-date">Elementary School</div>
+                    <div class="timeline-content">
+                        <p><strong>Dimasalang Norte Elementary School</strong></p>
+                        <p>Regular Program in Elementary Education</p>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+  </div>
+  
+
+
+ <!-- Skills Modal -->
+ <div class="modal fade" id="skillsModal" tabindex="-1" role="dialog" aria-labelledby="skillsModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+          <div class="modal-header">
+              <h5 class="modal-title" id="skillsModalLabel">Skills</h5>
+              
+          </div>
+          <div class="modal-body">
+              <div class="skill-item">
+                  <h6>Web Development</h6>
+                  <p>I work with HTML, CSS, JavaScript, PHP, and SQL to create functional websites.</p>
+              </div>
+              <div class="skill-item">
+                  <h6>Photo Editing</h6>
+                  <p>I use Photoshop CS6, Canva, and Picsart for editing photos and enhancing visuals.</p>
+              </div>
+              <div class="skill-item">
+                  <h6>Video Editing</h6>
+                  <p>I'm experienced with Filmora, Capcut, Kinemaster, and Power Director for editing videos.</p>
+              </div>
+              <div class="skill-item">
+                  <h6>Graphic Design</h6>
+                  <p>I use Photoshop and Canva to create eye-catching graphics.</p>
+              </div>
+              <div class="skill-item">
+                  <h6>Computer Troubleshooting</h6>
+                  <p>I troubleshoot both software and hardware issues, including installing operating systems and diagnosing hardware problems.</p>
+              </div>
+              <div class="skill-item">
+                  <h6>Project Management</h6>
+                  <p>I handled a good amount of projects since entering college, including group projects and capstone projects.</p>
+              </div>
+          </div>
+          <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          </div>
+      </div>
+  </div>
+</div>
+
+
+
+ <!-- Seminars / Workshops Modal -->
+ <div class="modal fade" id="seminarsModal" tabindex="-1" role="dialog" aria-labelledby="seminarsModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+          <div class="modal-header">
+              <h5 class="modal-title" id="seminarsModalLabel">Seminars / Workshops</h5>
+             
+          </div>
+          <div class="modal-body">
+              <h6>Clairemont Ferrond</h6>
+              <p>Forging Connections: Building Bridges of Innovation and Talents</p>
+              <p>Defend and Protect: Cyber-security Awareness Symposium</p>
+
+              <h6>Stanford IT Learning</h6>
+              <p>Introduction to 3D Printing</p>
+
+              <h6>Phinma Araullo University</h6>
+              <p>IGNITE CIT TECH TALK: Introduction to Swift Playground</p>
+              <p>University Research Colloquium 2024</p>
+
+              <h6>Found-ever Roadshow</h6>
+              <p>Learning and Development</p>
+
+              <h6>Salesforce University</h6>
+              <p>IT Industry Interaction for Student Success</p>
+
+              <h6>XIAOMI CAMPUS TOUR</h6>
+              <p>Game Development Masterclass</p>
+
+              <h6>PSiTE</h6>
+              <p>iRCITE 2024: Breaking Barriers and Empowering Change Through Global Innovation, Knowledge, Engineering, and Diversity-Centered Research</p>
+          </div>
+          <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          </div>
+      </div>
+  </div>
+</div>
+
+<!-- Achievements Modal -->
+<div class="modal fade" id="achievementsModal" tabindex="-1" role="dialog" aria-labelledby="achievementsModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+          <div class="modal-header">
+              <h5 class="modal-title" id="achievementsModalLabel">Achievements</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+              </button>
+          </div>
+          <div class="modal-body">
+              <div class="achievement-category">
+                  <h6>College:</h6>
+                  <p>CHED Scholar, Consistent Dean’s Lister, Pinned</p>
+              </div>
+              <div class="achievement-category">
+                  <h6>Senior High School:</h6>
+                  <p>With Honors</p>
+              </div>
+              <div class="achievement-category">
+                  <h6>High School:</h6>
+                  <p>With Honors</p>
+              </div>
+              <div class="achievement-category">
+                  <h6>Elementary:</h6>
+                  <p>With Honor</p>
+              </div>
+          </div>
+          <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          </div>
+      </div>
+  </div>
+</div>
+
+
+
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+
+  </body>
+</html>

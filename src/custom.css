@@ -1,0 +1,45 @@
+.my-yellow-text{
+    color: #FFD369;
+}
+
+.my-back-text{
+    color: #222831;
+}
+
+.my-grey-text{
+    color: #393E46;
+}
+
+.my-white-text{
+    color: #EEEEEE;
+}
+
+/* bg */
+
+.my-yellow-bg{
+    color: #FFD369;
+}
+
+.my-back-bg{
+    color: #222831;
+}
+
+.my-grey-bg{
+    color: #393E46;
+}
+
+.my-white-bg{
+    color: #EEEEEE;
+}
+
+.about-btns{
+    color: #FFD369;
+    background-color: #222831;
+    padding: 1rem;
+    border: #FFD369;
+    font-size: 1rem;
+}
+
+.modal-body {
+    text-align: left; /* Ensures text alignment is left-aligned */
+}
