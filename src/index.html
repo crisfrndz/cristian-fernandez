@@ -36,6 +36,24 @@
       .modal-body.modal-body-left {
     text-align: left;
 }
+
+.project-image {
+  width: 100%; /* Full width of the column */
+  max-width: 300px; /* Limit maximum width */
+  height: 200px; /* Fixed height for consistency */
+  object-fit: cover; /* Cover the area while maintaining aspect ratio */
+  margin-bottom: 10px; /* Spacing between image and label */
+  border-radius: 1rem; /* Rounded corners */
+}
+
+.badge-image {
+  width: 100%; /* Full width of the column */
+  max-width: 200px; /* Limit maximum width */
+  height: 200px; /* Fixed height for consistency */
+  object-fit: fill; /* Cover the area while maintaining aspect ratio */
+  margin-bottom: 10px; /* Spacing between image and label */
+  border-radius: 1rem; /* Rounded corners */
+}
 .folder-icon {
         font-size: 150px; /* Increase the icon size */
         color: #ffd369; /* Adjust color as needed */
@@ -81,13 +99,18 @@
         color: #ffffff; /* Optional: Adjust label color for better readability */
     }
 
-    .fourpic{
-      width: 100%;
+    .fourpic {
+      width: 80%; /* Adjust to a smaller width */
+      max-width: 500px; /* Set a maximum width for consistency */
       border-radius: 25px;
-    }
-    .picture-container{
-      width: 50%;
-    }
+  }
+  
+  .picture-container {
+      width: 50%; /* Keep this as is, or adjust as needed */
+      display: flex; /* Use flexbox for better alignment */
+      justify-content: center; /* Center the items */
+  }
+  
 
     @media only screen and (max-width: 768px) {
   .fourpic, .picture-container {
@@ -107,7 +130,7 @@
 
     <!-- **** Hero Section **** -->
     <section id="hero" class="jumbotron">
-      <div class="hero-container"></div>
+      
       <div class="container">
         <h1 class="hero-title load-hidden">
           Hi, my name is <span class="text-color-main "><br>Cristian Fernandez</span>
@@ -153,16 +176,16 @@
                 I am Cristian Fernandez, a person  who loves technology. 
               </p>
               <p class="about-wrapper__info-text">
-                I love fixing things and finding solutions about problems. I also do some multimedia things like photo and video editing. Lastly my passion towards my course makes me love building websites.
+                I’m a results-driven professional with a background in web development, graphic design, and project management. I enjoy collaborating with others and tackling challenges head-on. Thriving in fast-paced environments, I’m committed to delivering high-quality results on time. I’m excited to bring my skills to innovative projects in the IT industry.
               </p>
               <div class="d-flex flex-wrap gap-3">
-                <button class="about-btns " data-toggle="modal" data-target="#personalInfoModal">Personal Information</button>
-                <button class="about-btns" data-toggle="modal" data-target="#educationModal">Education</button>
-                <button type="button" class="about-btns " data-toggle="modal" data-target="#skillsModal">Skills</button>
-                <button class="about-btns " data-toggle="modal"  data-target="#certificationsModal">Certifications</button>         
-                <button class="about-btns " data-toggle="modal" data-target="#seminarsModal">Seminars / Workshops</button>
-                <button class="about-btns " data-toggle="modal" data-target="#achievementsModal">Achievements</button>
-                <button class="about-btns" data-toggle="modal" data-target="#experienceModal">Experience</button>
+                <!-- <button class="about-btns " data-toggle="modal" data-target="#personalInfoModal">Personal Information</button> -->
+                <!-- <button class="about-btns" data-toggle="modal" data-target="#educationModal">Education</button> -->
+                <!-- <button type="button" class="about-btns " data-toggle="modal" data-target="#skillsModal">Skills</button> -->
+                <!-- <button class="about-btns " data-toggle="modal"  data-target="#certificationsModal">Certifications</button>          -->
+                <!-- <button class="about-btns " data-toggle="modal" data-target="#seminarsModal">Seminars / Workshops</button> -->
+                <!-- <button class="about-btns " data-toggle="modal" data-target="#achievementsModal">Achievements</button> -->
+                <!-- <button class="about-btns" data-toggle="modal" data-target="#experienceModal">Experience</button> -->
               </div>
               <span class="d-flex mt-3 gap-3">
                 <a
@@ -321,9 +344,76 @@
         
 
         </div>
+        <!-- certs -->
+        <div class="project-wrapper">
+          <h2 class="section-title dark-blue-text">Certifications</h2>
+      
+          <div class="row">
+              <div class="container mt-5">
+                  <div class="row">
+                      <!-- Project Item 1 -->
+                      <div class="col-md-3 project-item">
+                          <img src="/src/assets/Certs/aws sem 1.png" alt="Announcesync Web" class="project-image">
+                          <!-- <div class="label">Announcesync Web</div> -->
+                      </div>
+                      <!-- Project Item 2 -->
+                      <div class="col-md-3 project-item">
+                          <img src="/src/assets/Certs/aws sem 2.png" alt="Announcesync Mobile App" class="project-image">
+                          <!-- <div class="label">Announcesync Mobile App</div> -->
+                      </div>
+                      <!-- Project Item 3 -->
+                      <div class="col-md-3 project-item">
+                          <img src="/src/assets/Certs/oracle.png" alt="Ticketing System" class="project-image">
+                          <!-- <div class="label">Ticketing System</div> -->
+                      </div>
+                      <!-- Project Item 4 -->
+                      <div class="col-md-3 project-item">
+                          <img src="/src/assets/Certs/indian.png" alt="ChatAU" class="project-image">
+                          <!-- <div class="label">ChatAU</div> -->
+                      </div>
+                      
+                      <!-- Add more project items as needed -->
+                  </div>
+              </div>
+          </div>
+          <!-- /END Project -->
+          <div class="project-wrapper">
+            <h2 class="section-title dark-blue-text">Salesforce Badges <a href="https://www.salesforce.com/trailblazer/h6q4mirtbj6aqncal6" class="btn btn-outline-warning btn-sm text-dark font-weight-bold" target="_blank">Visit Profile</a>
+            </h2>
+        
+            <div class="row">
+                <div class="container mt-5">
+                  
+                    <div class="row d-flex justify-content-center">
+                        <!-- Project Item 1 -->
+                        <div class="col-md-3 project-item">
+                            <img src="/src/assets/Certs/admin.webp" alt="Announcesync Web" class="badge-image">
+                            <!-- <div class="label">Announcesync Web</div> -->
+                        </div>
+                        <!-- Project Item 2 -->
+                        <div class="col-md-3 project-item">
+                            <img src="/src/assets/Certs/app.webp" alt="Announcesync Mobile App" class="badge-image">
+                            <!-- <div class="label">Announcesync Mobile App</div> -->
+                        </div>
+                        <!-- Project Item 3 -->
+                        <div class="col-md-3 project-item">
+                            <img src="/src/assets/Certs/developer.webp" alt="Ticketing System" class="badge-image">
+                            <!-- <div class="label">Ticketing System</div> -->
+                        </div>
+                        <!-- Project Item 4 -->
+                       
+                        
+                        <!-- Add more project items as needed -->
+                    </div>
+                </div>
+            </div>
+          
+      </div>
+      
       </div>
     </section>
     <!-- /END Projects Section -->
+     
 
     <!-- **** Contact Section **** -->
     <section id="contact">
