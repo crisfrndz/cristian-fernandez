@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="assets/css/pallete.css">
     
 
-    <title>Cristian Fernandez | Experienced Project Manager in IT</title>
+    <title>Cristian Fernandez</title>
     <meta name="keywords" content="cristian, cristian l fernandez,cristian fernandez, project manager, tech support, technician, it specialist" />
     <meta name="description" content="Cristian Fernandez is a skilled Project Manager specializing in tech projects, ensuring successful delivery and client satisfaction." />
     <link rel="stylesheet" href="custom.css">
@@ -33,6 +33,26 @@
     ></script>
 
     <style>
+   .changing-title {
+    border-right: 2px solid; /* Cursor effect */
+    white-space: nowrap;
+    overflow: hidden; /* Hides the overflowing text */
+    animation: blink 0.7s step-end infinite; /* Cursor blink effect */
+}
+
+@keyframes blink {
+    50% {
+        border-color: transparent; /* Cursor blink effect */
+    }
+}
+
+
+.hidden {
+    opacity: 0;
+}
+
+
+
       .modal-body.modal-body-left {
     text-align: left;
 }
@@ -133,10 +153,11 @@
       
       <div class="container">
         <h1 class="hero-title load-hidden">
-          Hi, my name is <span class="text-color-main "><br>Cristian Fernandez</span>
+          Hi, my name is <span class="text-color-main"><br>Cristian Fernandez</span>
           <br />
-          Project Manager
-        </h1>
+          <span class="changing-title "></span>
+      </h1>
+      
         <p class="hero-cta load-hidden">
           <a rel="noreferrer" class="cta-btn cta-btn--hero" href="#about"
             >Know more</a
@@ -453,7 +474,7 @@
           <a rel="noreferrer" href="https://www.x.com/Crisfer9dez" target="_blank">
             <i class="fa fa-twitter fa-inverse"></i>
           </a>
-          <a rel="noreferrer" href="https://www.linkedin.com/in/cristianfer9dez" target="_blank">
+          <a rel="noreferrer" href="https://www.linkedin.com/in/cristian-fer9dez" target="_blank">
             <i class="fa fa-linkedin fa-inverse"></i>
           </a>
           <a rel="noreferrer" href="https://www.youtube.com/@CristianFer9dez" target="_blank">
@@ -716,6 +737,39 @@
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+  <script>
+    const titles = ["Web Developer", "Project Manager", "Tech Support"];
+    let titleIndex = 0;
+    let charIndex = 0;
+    const changingTitleElement = document.querySelector('.changing-title');
+
+    function typeTitle() {
+        if (charIndex < titles[titleIndex].length) {
+            changingTitleElement.textContent += titles[titleIndex].charAt(charIndex);
+            charIndex++;
+            setTimeout(typeTitle, 100); // Adjust typing speed (100ms)
+        } else {
+            setTimeout(deleteTitle, 2000); // Pause before deleting
+        }
+    }
+
+    function deleteTitle() {
+        if (charIndex > 0) {
+            changingTitleElement.textContent = titles[titleIndex].substring(0, charIndex - 1);
+            charIndex--;
+            setTimeout(deleteTitle, 50); // Adjust deleting speed (50ms)
+        } else {
+            titleIndex = (titleIndex + 1) % titles.length; // Move to the next title
+            setTimeout(typeTitle, 500); // Pause before typing the next title
+        }
+    }
+
+    // Start the typing effect
+    typeTitle();
+</script>
+
+
 
 
   </body>
